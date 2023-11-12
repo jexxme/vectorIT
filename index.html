@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNG to SVG Converter</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <script src="https://kit.fontawesome.com/b2ff63f545.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/imagetracerjs@1.2.6/imagetracer_v1.2.6.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="drop-area">
+            <form class="my-form">
+                <p>Upload a PNG file or drag and drop it here</p>
+                <input type="file" id="fileElem" accept="image/png" onchange="handleFiles(this.files)">
+                <label class="button" for="fileElem">Select a file</label>
+            </form>
+        </div>
+        <!-- Options Button -->
+        <button id="optionsBtn">⚙️ Options</button> <!-- Placeholder icon represented by a gear emoji -->
+
+        <!-- Hidden Options Menu -->
+        <div id="optionsMenu" style="display: none;">
+            <label for="ltres">Line Threshold (ltres):</label>
+            <input type="number" id="ltres" value="1">
+
+            <label for="qtres">Quantization Threshold (qtres):</label>
+            <input type="number" id="qtres" value="1">
+
+            <label for="scale">Scale:</label>
+            <input type="number" id="scale" value="1" step="0.1">
+
+            <label for="strokewidth">Stroke Width:</label>
+            <input type="number" id="strokewidth" value="1" step="0.1">
+        </div>
+
+        <button id="convertBtn" onclick="convertToSVG()">Convert</button>
+        <div id="result"></div>
+    </div>
+    <footer>
+        <div class="footer-icons">
+            <a href="https://jexxme.github.io" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <a href="https://github.com/jexxme" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jerome-sommerfeldt-907800252/" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+
+</html>

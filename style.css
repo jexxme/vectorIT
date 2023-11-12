@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.my-form {
+    margin: 10px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+#optionsBtn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: contents;
+}
+
+#optionsMenu {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#optionsMenu label,
+#optionsMenu input {
+    margin: 5px;
+    display: block;
+    animation: eas;
+}
+
+#convertBtn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#convertBtn:hover {
+    background-color: #218838;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+
+
+
+footer {
+    width: 100%;
+    background-color: #fff;
+    /* Transparent background */
+    padding: 15px 0;
+    /* Add some padding */
+    position: fixed;
+    /* Fixed at the bottom */
+    bottom: 0;
+    /* Align to bottom */
+    left: 0;
+    /* Align to left */
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* Rest of your styles... */
+
+
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    /* Center the icons horizontally */
+    align-items: center;
+    /* Center the icons vertically */
+    gap: 25px;
+    /* Space between icons */
+}
+
+.footer-icons a {
+    text-decoration: none;
+    color: inherit;
+    /* Take the color from the parent */
+    font-size: 1.5rem;
+    /* Size of icons */
+}
+
+.fa {
+    font-size: 50px;
+    /* Size of icons */
+}
