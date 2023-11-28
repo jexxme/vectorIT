@@ -9,9 +9,21 @@ document.getElementById('drop-area').ondrop = function (event) {
 };
 
 function handleFiles(files) {
-    // Handle the files (only the first if multiple)
-    // For example, you can read the file and then pass it to the conversion function
-}
+    const selectedFilesDiv = document.getElementById('selected-files');
+  
+    // Clear the existing file names
+    selectedFilesDiv.innerHTML = '';
+  
+    // Add the file names to the div
+    for (const file of files) {
+      const fileNameElement = document.createElement('p');
+      fileNameElement.textContent = file.name;
+      selectedFilesDiv.appendChild(fileNameElement);
+    }
+  }
+  
+  
+  
 
 function convertToSVG() {
     let fileInput = document.getElementById('fileElem');
@@ -51,9 +63,27 @@ function displaySVG(svgString) {
 
 document.getElementById('optionsBtn').addEventListener('click', function () {
     var menu = document.getElementById('optionsMenu');
+    
     if (menu.style.display === 'none') {
         menu.style.display = 'block';
     } else {
         menu.style.display = 'none';
     }
 });
+
+
+
+
+
+function showToast(message) {
+    const toastContainer = document.getElementById('toastContainer');
+    const toastBody = document.createElement('div');
+    toastBody.classList.add('toast-body');
+    toastBody.textContent = message;
+  
+    const toast = new bootstrap.Toast(toastContainer);
+    toastBody.classList.add('text-danger');
+    toastContainer.appendChild(toastBody);
+    toast.show();
+  }
+  
