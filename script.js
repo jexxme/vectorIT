@@ -37,16 +37,10 @@ function convertToSVG() {
     reader.onload = function (event) {
         let img = new Image();
         img.onload = function () {
-            // Get options from the form
-            let ltres = document.getElementById('ltres').value;
-            let qtres = document.getElementById('qtres').value;
-            let scale = document.getElementById('scale').value;
-            let strokewidth = document.getElementById('strokewidth').value;
-
             // Convert image to SVG
             ImageTracer.imageToSVG(img.src, function (svgString) {
                 displaySVG(svgString);
-            }, { ltres, qtres, scale, strokewidth });
+            });
         };
         img.src = event.target.result;
     };
@@ -70,20 +64,3 @@ document.getElementById('optionsBtn').addEventListener('click', function () {
         menu.style.display = 'none';
     }
 });
-
-
-
-
-
-function showToast(message) {
-    const toastContainer = document.getElementById('toastContainer');
-    const toastBody = document.createElement('div');
-    toastBody.classList.add('toast-body');
-    toastBody.textContent = message;
-  
-    const toast = new bootstrap.Toast(toastContainer);
-    toastBody.classList.add('text-danger');
-    toastContainer.appendChild(toastBody);
-    toast.show();
-  }
-  
